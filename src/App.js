@@ -4,17 +4,34 @@ import ReactDOM from "react-dom/client";
 import Welcome from './Pages/Welcome';
 import Calculate from './Pages/Calculate';
 import { useState } from 'react';
+import Title from './Components/Data/Title';
+import Result from './Pages/Result';
 
 function App() {
 
-  const [username, setUsername] = useState(null);
+  const [username, setUsername] = useState('');
+
+  const nameHandler = (data) => {
+
+    const {name, id} = data;
+
+    setUsername(name);
+    console.log("On App.js");
+    console.log(name);
+  }
 
   return (
 
       <Routes>
         <Route path='/' element={<Home/>} />
-        <Route path='/welcome' element={<Welcome/>} />
-        <Route path='/calculate' element={<Calculate username={username}/>} />
+        <Route path='/welcome' element={<Welcome onAddName={nameHandler}/>} />
+        <Route path='/calculate' element={
+          <div>
+            <Title name={username}></Title>
+            <Calculate></Calculate>
+          </div>
+        } />
+        <Route path='/result' element={<Result/>} />
       </Routes>
     
   );

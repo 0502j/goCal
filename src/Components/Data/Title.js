@@ -1,7 +1,7 @@
-const Title = ({username}) => {
+const Title = (props) => {
     return(
         <div>
-            <h1>Olá, {username}</h1>
+            <h1>Olá, {props.name}</h1>
         </div>
     );
 }

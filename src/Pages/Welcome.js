@@ -3,7 +3,7 @@ import FormField from '../Components/FormField/FormField';
 import Button from '../Components/UI/Button';
 import { useState, useRef } from 'react';
 
-const Welcome = (props) => {
+const Welcome = ({onAddName}) => {
 
     const enterNameHandler = (enteredData) => {
         const userinfo = {
@@ -13,6 +13,7 @@ const Welcome = (props) => {
 
         console.log("On Welcomejs");
         console.log(userinfo);
+        onAddName(userinfo);
     }
 
     return(
