@@ -3,7 +3,7 @@ import Button from '../UI/Button';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const Form = ({onAddUserInfo}) => {
+const Form = ({onAddInfo}) => {
 
     const navigate = useNavigate();
 
@@ -14,21 +14,28 @@ const Form = ({onAddUserInfo}) => {
         enteredWeight:''
     });
 
+    const calcInfo = useState({
+        basal: 0,
+        weight:0,
+        loseweight:0,
+        gainweight:0
+    });
+
+
     const submitHandler = (event) => {
 
         event.preventDefault();
 
         const invalidAge = userInput.enteredAge <= 0 || userInput.enteredAge >= 150 || userInput.enteredAge == null;
-        const invalidWeight = userInput.enteredWeight < 0 || userInput.enteredWeight < 1000 ||  userInput.enteredWeight == null;
-        const invalidHeight =  userInput.enteredHeight < 10 || userInput.enteredHeight > 300 || userInput.enteredHeight == null;
+        const invalidWeight = userInput.enteredWeight <= 0 || userInput.enteredWeight >= 1000 ||  userInput.enteredWeight == null;
+        const invalidHeight =  userInput.enteredHeight <= 10 || userInput.enteredHeight >= 300 || userInput.enteredHeight == null;
         
         if(invalidAge || invalidWeight || invalidHeight){
-            alert("Invalid data. Please try again.");
+            alert("Informações inválidas. Tente novamente.");
         }else{
+            onAddInfo(userInput);
             navigate('/result');
         }
-
-        onAddUserInfo(userInput);
 
     };
 
@@ -61,6 +68,9 @@ const Form = ({onAddUserInfo}) => {
         })
     };
 
+    const calculateHandler = () => {
+   
+    }
 
     return(
         <form className={styles.formgroup} onSubmit={submitHandler}>

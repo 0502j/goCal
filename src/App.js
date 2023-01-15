@@ -6,17 +6,29 @@ import Calculate from './Pages/Calculate';
 import { useState } from 'react';
 import Title from './Components/Data/Title';
 import Result from './Pages/Result';
+import Form from './Components/Form/Form';
 
 function App() {
 
   const [username, setUsername] = useState('');
+
+  const [userInput, setUserInput] = useState({
+    enteredGender:'',
+    enteredAge:'',
+    enteredHeight:'',
+    enteredWeight:''
+  });
 
   const nameHandler = (data) => {
     const {name, id} = data;
     setUsername(name);
   }
 
-
+  const infoHandler = (userdata) => {
+    const {gender, age, height, weight} = userdata;
+    setUserInput(userdata);
+    console.log(userdata);
+  }
  
   return (
 
@@ -27,9 +39,12 @@ function App() {
           <div>
             <Title name={username}></Title>
             <Calculate></Calculate>
+            <Form onAddInfo={infoHandler}></Form>
           </div>
         } />
-        <Route path='/result' element={<Result/>} />
+        <Route path='/result' element={
+        <Result />
+        } />
       </Routes>
     
   );
