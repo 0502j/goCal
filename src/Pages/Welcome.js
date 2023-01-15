@@ -20,7 +20,7 @@ const Welcome = ({onAddName}) => {
     return(
         <div className="container">
             <div className={styles.welcomepage}>
-                <h1 className={styles.title}>Para começar, como podemos te chamar?</h1>
+                <h2 className={styles.title}>Para começar, como podemos te chamar?</h2>
                 <FormField onEnterName={enterNameHandler} type="text" placeholder="Digite o seu nome"></FormField>
             </div>
         </div>

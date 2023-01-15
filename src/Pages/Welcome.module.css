@@ -1,12 +1,12 @@
 .welcomemain{
-    background-color: #DCDCE5;
+    background-color: #F3F3F3;
 }
 
 .welcomepage{
-    background-color: #DCDCE5;
-    padding: 15% 10%;
+    background-color: #F3F3F3;
+    padding: 5% 5%;
     margin: 0;
-    text-align: center;
+    text-align: left;
 }
 
 .title {

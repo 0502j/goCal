@@ -1,5 +1,5 @@
 .calculatemain{
-    padding: 2% 2%;
+    padding: 2% 5%;  
 }
 
 .calculatemain > * {
@@ -7,7 +7,7 @@
 }
 
 .calculatemain h2{
-    margin-bottom: 2.5em;
+    margin-bottom: 0.5em;
     text-align: left;
 
 }

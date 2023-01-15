@@ -27,7 +27,6 @@ function App() {
   const infoHandler = (userdata) => {
     const {gender, age, height, weight} = userdata;
     setUserInput(userdata);
-    console.log(userdata);
   }
  
   return (
@@ -43,7 +42,7 @@ function App() {
           </div>
         } />
         <Route path='/result' element={
-        <Result />
+        <Result userdata={userInput} />
         } />
       </Routes>
     
