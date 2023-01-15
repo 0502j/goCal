@@ -12,14 +12,12 @@ function App() {
   const [username, setUsername] = useState('');
 
   const nameHandler = (data) => {
-
     const {name, id} = data;
-
     setUsername(name);
-    console.log("On App.js");
-    console.log(name);
   }
 
+
+ 
   return (
 
       <Routes>
