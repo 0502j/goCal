@@ -1,0 +1,21 @@
+.formgroup{
+    width: 100%;
+    margin: auto;
+    padding: auto;
+}
+
+.formgroup > * {
+    width: 60%;
+    height: 80%;
+    margin: 2em;
+    padding: 1.5% 2%;
+}
+
+.formgroup input{
+    border-radius: 1em;
+    
+}
+
+.formgroup select{
+    border-radius: 1em;
+}

@@ -1,0 +1,12 @@
+.input{
+    background-color: white;
+    outline: none;
+    border-style: none;
+    border-radius: 8px;
+    padding: 1% 10%;
+    text-align: center;
+}
+
+.inputdiv{
+    padding: 2% 0%;
+}

@@ -1,0 +1,18 @@
+.calculatemain{
+    padding: 2% 2%;
+}
+
+.calculatemain > * {
+    text-align: center;
+}
+
+.calculatemain h2{
+    margin-bottom: 2.5em;
+    text-align: left;
+
+}
+
+.calculatemain h1{
+    text-align: left;
+    
+}
