@@ -14,11 +14,20 @@ const FormField = (props) => {
 
     const submitHandler = (event) => {
         event.preventDefault();
+
         const userinfo = {
             name: username
         }
         props.onEnterName(userinfo);
-        navigate('/calculate');
+
+        if(username == null || username.length<5){
+            alert("Invalid username.")
+            navigate('/welcome');
+        }else{
+            navigate('/calculate');
+        }
+       
+        
     };
 
     return(

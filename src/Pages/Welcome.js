@@ -6,6 +6,7 @@ import { useState, useRef } from 'react';
 const Welcome = ({onAddName}) => {
 
     const enterNameHandler = (enteredData) => {
+        
         const userinfo = {
             ...enteredData,
             id: Math.random().toString()
