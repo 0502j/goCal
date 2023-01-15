@@ -1,5 +1,8 @@
-# goCal
+<p align=center>
+<img src="https://user-images.githubusercontent.com/71787801/212570465-ccd6bfe1-09e8-4bc8-9d6f-bb71f30591cd.png">
+</p>
 
+<br>
 A React project that calculates a person's energy expenditure.
 
 <div style="display:flex;">
